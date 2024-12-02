@@ -25,16 +25,16 @@ module.exports.run = async function({
       let page = 1;
       let start = (page - 1) * pages;
       let end = start + pages;
-      let helpMessage = `🌟𝗠𝗬 𝗔𝗩𝗔𝗜𝗟 𝗖𝗠𝗗 𝗟𝗜𝗦𝗧🌟:\n\n`;
+      let helpMessage = `𝑀𝑌 𝐴𝑉𝐴𝐼𝐿 𝐶𝑀𝐷𝑆 :\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
         helpMessage += `\t${i + 1}.🌠
     ╭─╼━━━━━━━━╾─╮
          ${prefix}${commands[i]} 
     ╰─━━━━━━━━━╾─╯\n`;
       }
-      helpMessage += '\n🌟𝗠𝗬 𝗘𝗩𝗘𝗡𝗧 𝗟𝗜𝗦𝗧🌟:\n\n';
+      helpMessage += '\n𝑀𝑌 𝐸𝑉𝐸𝑁𝑇 𝐿𝐼𝑆𝑇 :\n\n';
       eventCommands.forEach((eventCommand, index) => {
-        helpMessage += `\t${index + 1}.🌟
+        helpMessage += `\t${index + 1}.
    ╭─╼━━━━━━━━╾─╮
         ${prefix}${eventCommand} 
    ╰─━━━━━━━━━╾─╯\n`;
@@ -46,16 +46,16 @@ module.exports.run = async function({
       const pages = 20;
       let start = (page - 1) * pages;
       let end = start + pages;
-      let helpMessage = `🌟𝗠𝗬 𝗔𝗩𝗔𝗜𝗟 𝗖𝗠𝗗 𝗟𝗜𝗦𝗧🌟:\n\n`;
+      let helpMessage = `𝗠𝗬 𝗔𝗩𝗔𝗜𝗟 𝗖𝗠𝗗 𝗟𝗜𝗦𝗧:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
         helpMessage += `\t${i + 1}.🌠
 ╭─╼━━━━━━━━╾─╮
      ${prefix}${commands[i]} 
 ╰─━━━━━━━━━╾─╯\n`;
       }
-      helpMessage += '\n🌟𝗠𝗬 𝗘𝗩𝗘𝗡𝗧 𝗟𝗜𝗦𝗧🌟:\n\n';
+      helpMessage += '\n𝗠𝗬 𝐸𝑉𝐸𝑁𝗧 𝗟𝗜𝗦𝗧:\n\n';
       eventCommands.forEach((eventCommand, index) => {
-        helpMessage += `\t${index + 1}.🌟
+        helpMessage += `\t${index + 1}.
 ╭─╼━━━━━━━━╾─╮
      ${prefix}${eventCommand}
 ╰─━━━━━━━━━╾─╯\n`;
@@ -103,7 +103,7 @@ module.exports.handleEvent = async function({
     messageID,
     body
   } = event;
-  const message = prefix ? '𝗧𝗵𝗶𝘀 𝗶𝘀 𝗺𝘆 𝗽𝗿𝗲𝗳𝗶𝘅: ' + prefix : "𝗦𝗼𝗿𝗿𝘆 𝗶 𝗱𝗼𝗻'𝘁 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗳𝗶𝘅";
+  const message = prefix ? '𝑇𝐻𝐼𝑆 𝑖𝑠 𝑚𝑦 𝑝𝑟𝑒𝑓𝑖𝑥 : ' + prefix : "𝗦𝗼𝗿𝗿𝘆 𝗶 𝗱𝗼𝗻'𝘁 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗳𝗶𝘅";
   if (body?.toLowerCase().startsWith('prefix')) {
     api.sendMessage(message, threadID, messageID);
   }
